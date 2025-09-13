@@ -2,7 +2,6 @@
 import os
 import re
 import io
-import joblib
 from datetime import datetime, timedelta, date, time
 from collections import defaultdict
 from typing import Optional, List
@@ -301,4 +300,5 @@ async def create_expense(expense: Expense):
         }).execute()
         return {"success": True, "data": result.data[0]}
     except Exception as e:
+
         raise HTTPException(status_code=400, detail=str(e))
