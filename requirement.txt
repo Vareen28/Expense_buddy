@@ -3,7 +3,9 @@ uvicorn
 supabase
 python-dotenv
 pydantic
-openai
+google-generativeai
 pytesseract
 Pillow
 python-multipart
+python-jose
+requests
