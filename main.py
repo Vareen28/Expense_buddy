@@ -79,7 +79,7 @@ analyzer = SpendingAnalyzer(supabase)
 # --- API Endpoints ---
 @app.get("/")
 async def root():
-    return {"message": "AI Expense Buddy API is running!"}
+    return {"message": "AI Expense Buddy API is running! To move onto the next page, enter /docs in the URL."}
 
 @app.get("/health")
 async def health_check():
@@ -127,3 +127,4 @@ async def get_expenses(user_id: str = "demo_user", limit: int = 50):
 @app.get("/analysis/{user_id}")
 async def get_spending_analysis(user_id: str = "demo_user"):
     return analyzer.analyze_spending_patterns(user_id)
+
